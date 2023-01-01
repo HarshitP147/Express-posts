@@ -25,11 +25,9 @@ router.post("/delete", (req, res) => {
         try {
             res.redirect("/");
         } catch (err) {
-            res.render("/admin/delete");
+            res.redirect("/admin/actions");
         }
     });
-
-    res.redirect("/");
 });
 
 router.get("/edit/:postId", (req, res) => {

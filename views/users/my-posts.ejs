@@ -1,0 +1,22 @@
+<%- include('../partials/head.ejs') %>
+<link rel="stylesheet" href="/css/posts.css">
+</head>
+
+<body>
+    <%- include('../partials/navbar.ejs') %>
+    <h1 class="main-header">There are currently <%= posts.length %> posts in your account</h1>
+
+    <main class="main-posts-section">
+        <% posts.forEach(post => { %>
+            <div class="post-card">
+                <img src="<%= post.imageUrl %>" alt="">
+                <h3><%= post.caption %></h3>
+                <hr>
+                <span style="font-size: 13px;">
+                    <%= post.hashtags %>
+                </span>
+            </div>
+        <% }) %>
+    </main>
+
+<%- include('../partials/end.ejs') %>

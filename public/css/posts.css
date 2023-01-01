@@ -1,0 +1,53 @@
+.main-posts-section {
+    margin: 2rem 7.5%;
+    padding: 1em center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.post-card {
+    border-radius: 0.4rem;
+    box-shadow: 1px 0 0.8em #676767;
+    margin: 1em auto;
+    width: 35em;
+    padding: 0.9em;
+}
+
+.post-card img {
+    border-radius: 0.2em;
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.post-card h3 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 0.2em 0;
+}
+
+.action-btn-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.2em;
+}
+
+.action-btn {
+    width: 10em;
+    padding: 0.4rem 0.6em;
+    color: white;
+    text-align: center;
+    font-size: 1.1em;
+    border: none;
+    box-shadow: 0.1px 0.1px 0.6rem #2193dfd1;
+    border-radius: 0.4rem;
+    background-color: #2193df;
+    transition: all ease 150ms;
+}
+
+.action-btn:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    box-shadow: 0.1px 0.1px 0.5rem #9d9d9d;
+}

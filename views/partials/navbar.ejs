@@ -1,0 +1,20 @@
+<nav class="nav-container">
+    <ul class="nav-items-container">
+        <li class="nav-item">
+            <a href="/" class="<%= path==="/" ? 'active' : '' %>">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="/user/posts" class="<%= path==="/user/posts" ? 'active' : '' %>"> My posts </a>
+        </li>
+        <li class="nav-item">
+            <a href="/user/new" class="<%= path==="/user/new" ? 'active' : '' %>"> Add posts </a>
+        </li>
+    </ul>
+    <ul class="admin-nav-container">
+        <li class="nav-item">
+            <a href="/admin/actions" class="<%= path==="/admin/actions" ? 'active' : '' %>">
+                 Admin Post Actions
+            </a>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,27 @@
+<%- include('../partials/head.ejs') %>
+<link rel="stylesheet" href="/css/form.css">
+</head>
+
+<body>
+    <%- include('../partials/navbar.ejs') %>
+    
+    <h1 class="form-header">Add a new post for your feed</h1>
+
+    <form class="user-form" action="/user/new" method="post">
+        <div class="form-control">
+            <label for="imageUrl">Enter the url of the image</label>
+            <input type="text" name="imageUrl" id="imageUrl">
+        </div>
+        <div class="form-control">
+            <label for="caption">Enter the caption</label>
+            <textarea name="caption" id="caption" rows="4" ></textarea>
+        </div>
+        <div class="form-control">
+            <label for="hashtags">Enter post hashtags</label>
+            <textarea name="hashtags" id="hashtags"  rows="3"></textarea>
+        </div>
+        <button class="form-btn" type="submit">Add post !!</button>
+    </form>
+
+
+<%- include('../partials/end.ejs') %>

@@ -1,0 +1,27 @@
+<%- include('../partials/head.ejs') %>
+<link rel="stylesheet" href="/css/posts.css">
+</head>
+
+<body>
+    <%- include('../partials/navbar.ejs') %>
+    <main class="main-posts-section">
+        <% posts.forEach(post => { %>
+            <div class="post-card">
+                <img src="<%= post.imageUrl %>" alt="">
+                <h3><%= post.caption %></h3>
+                <hr>
+                <span style="font-size: 13px;">
+                    <%= post.hashtags %>
+                </span>
+                <div class="action-btn-container">
+                    <form action="/admin/delete" method="post">
+                        <input type="hidden" name="postId" value="<%= post.id %>">
+                        <button type="submit" class="action-btn">Delete</button>
+                    </form>
+                    <a href="/admin/edit/<%= post.id %>" class="action-btn">Edit</a>
+                </div>
+            </div>
+        <% }) %>
+    </main>
+
+<%- include('../partials/end.ejs') %>

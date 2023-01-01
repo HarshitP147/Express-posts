@@ -1,0 +1,32 @@
+<%- include('../partials/head.ejs') %>
+<link rel="stylesheet" href="/css/form.css">
+</head>
+
+<body>
+    <%- include('../partials/navbar.ejs') %>
+    
+    <h1 class="form-header">Edit your post</h1>
+
+    <form class="user-form" action="/admin/edit/<%= post.id %>" method="post">
+        <div class="form-control">
+            <label for="imageUrl">Post image url</label>
+            <input type="text" name="imageUrl" id="imageUrl" value="<%= post.imageUrl %>">
+        </div>
+        <img class="post-edit-img" src="<%= post.imageUrl %>" alt="">
+        <div class="form-control">
+            <label for="caption">Post caption</label>
+            <textarea name="caption" id="caption" rows="4" >
+                <%= post.caption %>
+            </textarea>
+        </div>
+        <div class="form-control">
+            <label for="hashtags">Post hashtags</label>
+            <textarea name="hashtags" id="hashtags"  rows="3">
+                <%= post.hashtags %>
+            </textarea>
+        </div>
+        <button class="form-btn" type="submit">Edit post !!</button>
+    </form>
+
+
+<%- include('../partials/end.ejs') %>

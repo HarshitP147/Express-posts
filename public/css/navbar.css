@@ -1,0 +1,36 @@
+.nav-container {
+    background-color: #3281ea;
+    padding: 0.7em 2.3em;
+    box-shadow: 1px 0 1rem #4e4e4e;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-items-container {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    padding: 0.4em 1em;
+}
+
+.nav-item a {
+    color: #000000;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all ease 280ms;
+}
+
+.nav-item a:hover,
+.nav-item a:active,
+.nav-item a.active {
+    color: white;
+    cursor: pointer;
+}
+
+.admin-nav-container {
+    margin-left: 12px;
+    display: flex;
+    list-style: none;
+}

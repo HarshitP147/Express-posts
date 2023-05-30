@@ -14,6 +14,17 @@ router.get("/posts", (req, res) => {
     });
 });
 
+router.get("/post/:postId", (req, res, next) => {
+    const postId = req.params.postId;
+    Post.fetchOne(postId, (post => {
+        res.render("users/post-detail", {
+            title: "Detail post view",
+            path: req.url,
+            post: post
+        })
+    }))
+})
+
 router.get("/new", (req, res) => {
     res.render("users/add-post", {
         title: "New post",

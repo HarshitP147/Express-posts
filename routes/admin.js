@@ -7,7 +7,6 @@ const Post = require("../models/post");
 
 const router = Router();
 
-const dataPath = path.join(__dirname, "..", "data", "users.json");
 
 router.get("/actions", (req, res) => {
     Post.fetchAll((post) => {

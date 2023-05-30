@@ -51,8 +51,8 @@ class Post {
 
     static fetchOne(postId, callback) {
         getPostsFromFile(dataPath, (posts) => {
-            const editPost = posts.find((post) => post.id === postId);
-            callback(editPost);
+            const userPost = posts.find((post) => post.id === postId);
+            callback(userPost);
         });
     }
 
@@ -65,11 +65,7 @@ class Post {
     static updatePost(newPost, callback) {
         // accessing the post and then changing the data
         getPostsFromFile(
-            dataPath,
-            (
-                /**@type{Array} */
-                posts
-            ) => {
+            dataPath, (posts) => {
                 const existingIndex = posts.findIndex(
                     (post) => post.id === newPost.id
                 );
@@ -85,7 +81,6 @@ class Post {
                 } catch (err) {
                     callback("Not updated");
                 }
-                // find by index and replace the data
             }
         );
     }

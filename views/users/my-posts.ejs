@@ -9,12 +9,14 @@
     <main class="main-posts-section">
         <% posts.forEach(post => { %>
             <div class="post-card">
-                <img src="<%= post.imageUrl %>" alt="">
-                <h3><%= post.caption %></h3>
-                <hr>
-                <span style="font-size: 13px;">
-                    <%= post.hashtags %>
-                </span>
+                    <a href="/user/post/<%= post.id %>">
+                    <img src="<%= post.imageUrl %>" alt="">
+                    <h3><%= post.caption %></h3>
+                    <hr>
+                    <span style="font-size: 13px;">
+                        <%= post.hashtags %>
+                    </span>
+                </a>
             </div>
         <% }) %>
     </main>

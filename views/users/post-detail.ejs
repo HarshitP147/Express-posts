@@ -1,0 +1,20 @@
+<%- include('../partials/head.ejs') %>
+<link rel="stylesheet" href="/css/detail.css"> 
+</head>
+<body>
+    <%- include('../partials/navbar.ejs') %>
+
+    <button class="back-btn" onclick="goBack()">Go back</button>
+    <main class="detail-view">
+        <img class="detail-img" src="<%= post.imageUrl %>" alt="">
+
+        <h4 class="detail-caption"><%= post.caption %></>
+    </main>
+
+    <script>
+        function goBack() {
+            window.history.back()
+        }
+    </script>
+
+<%- include('../partials/end.ejs') %>
